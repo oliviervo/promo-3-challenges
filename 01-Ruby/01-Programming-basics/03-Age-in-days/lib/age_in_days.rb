@@ -5,9 +5,8 @@ require 'date'
 
 def age_in_days(day, month, year)
   #TODO: return the age expressed in days given the day, month, and year of birth
- birthday=Date.new(year, month, day)
- datedujour=Date.today
- (datedujour - birthday).to_i
+
+ (Date.today-Date.new(year, month, day)).to_i
 end
 puts "you are #{age_in_days(06, 07, 2014)} days old."
 
