@@ -4,6 +4,10 @@ def ask_and_get(param)
   #TODO:
   #- Ask the user to write a value for param
   #- Get and return the string inputted by the user
+  puts "quel est #{param} "
+  param=gets.chomp
+
+
 end
 
 def name_from_terminal
@@ -20,4 +24,4 @@ full_name = name_from_terminal
 
 # custom_message =
 
-puts custom_message
+puts "Votre nom complet devrait être #{full_name}"
