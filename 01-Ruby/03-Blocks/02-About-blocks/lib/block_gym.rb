@@ -11,12 +11,13 @@ end
 def timer_for
   #TODO:  Return time taken to execute the given block
 t1 = Time.now
-# processing...
 t2 = Time.now
 delta = t2 - t1
 end
 
 def transform(element)
   #TODO:  Simply execute the given block on element
+
+yield(element)
 end
  puts tag("h1",["id", "title"] ) {"Some Title"}
