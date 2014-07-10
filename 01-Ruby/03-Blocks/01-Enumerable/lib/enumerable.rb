@@ -64,6 +64,15 @@ product([8,9,10])
 def sorted_pairs(array)
   # TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
   #       You should make use of Enumerable#each_slice
+
+  array2=[]
+  array.each_slice(2) { |pairs| p pairs
+  array2<<pairs.sort
+
+   }
+return array2
 end
+sorted_pairs(["ami","maison","ordinateur","chaise","instituteur","voiture"])
+
 
 
