@@ -66,10 +66,7 @@ def sorted_pairs(array)
   #       You should make use of Enumerable#each_slice
 
   array2=[]
-  array.each_slice(2) { |pairs| p pairs
-  array2<<pairs.sort
-
-   }
+  array.each_slice(2) { |pairs| array2<<pairs.sort }
 return array2
 end
 sorted_pairs(["ami","maison","ordinateur","chaise","instituteur","voiture"])
