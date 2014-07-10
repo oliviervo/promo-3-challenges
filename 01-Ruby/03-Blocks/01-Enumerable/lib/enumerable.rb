@@ -56,8 +56,10 @@ add_bang(["ami","maison","ordinateur","chaise","instituteur"])
 def product(array)
   # TODO: Calculate the product of an array of numbers.
   #       You should use of Enumerable#reduce
+  array.reduce(:*)
 
 end
+product([8,9,10])
 
 def sorted_pairs(array)
   # TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
