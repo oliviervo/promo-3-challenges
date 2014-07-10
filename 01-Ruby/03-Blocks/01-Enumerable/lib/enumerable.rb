@@ -25,10 +25,10 @@ even_numbers([1,2,3,8,9])
 def short_words(array, max_length)
   # TODO: Take and array of words, return the array of words not exceeding max_length characters
   #       You should use Enumerable#reject
-array.reject do|w|
-  if
+
+  array.reject do|w|
     w.length>max_length
-    end
+
   end
 
 end
@@ -39,16 +39,24 @@ short_words(["ami","maison","ordinateur","chaise","instituteur"], 5)
 def first_under(array, limit)
   # TODO: Return the first number from an array that is less than limit.
   #       You should use Enumerable#find
+  array.find { |n| n < limit }
+
 end
+first_under([1,2,3,8,9],8)
 
 def add_bang(array)
   # TODO: Take an array of strings and return a new array with "!" appended to each string.
   #       You should use Enumerable#map
+  array.map do |word| "#{word}!"
+  end
+
 end
+add_bang(["ami","maison","ordinateur","chaise","instituteur"])
 
 def product(array)
   # TODO: Calculate the product of an array of numbers.
   #       You should use of Enumerable#reduce
+
 end
 
 def sorted_pairs(array)
