@@ -49,6 +49,7 @@ elsif outcome[1]>outcome[0]
   return "You beat the bank! You win."
 elsif outcome[1]>21
   return "You are over 21... you loose."
+else "bim!"
 
 
 end
