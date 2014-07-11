@@ -56,27 +56,25 @@ sum_cal = 0
       "Sprite" => 170
   }
 
-
-
   happy_meal_calories = happy_Meal["Cheese Burger"] + happy_Meal["French fries"] + happy_Meal["Coca"]
   best_Of_Big_Mac_calories = best_Of_Big_Mac["Big Mac"] + best_Of_Big_Mac["French fries"] + best_Of_Big_Mac["Coca"]
   best_Of_Royal_Cheese_calories = best_Of_Royal_Cheese["Royal Cheese"] + best_Of_Royal_Cheese["Potatoes"] + best_Of_Royal_Cheese["Sprite"]
-
 
     list["Happy Meal"] = happy_meal_calories
     list["Best Of Big Mac"] =  best_Of_Big_Mac_calories
     list["Best Of Royal Cheese"] = best_Of_Royal_Cheese_calories
 
-
-
-  return orders.each {
+   orders.each{
     |elements| sum_cal += list[elements]
-  }
+    }
 
-  puts "sum cal est : #{sum_cal}"
-  puts "cal happy meal = #{happy_meal_calories}"
-  puts "cal BigMAc = #{best_Of_Big_Mac_calories}"
-  puts "cal Royal= #{best_Of_Royal_Cheese_calories}"
+  sum_cal
+
+  #puts "sum cal est : #{sum_cal}"
+  #puts "cal happy meal = #{happy_meal_calories}"
+  #puts "cal BigMAc = #{best_Of_Big_Mac_calories}"
+  #puts "cal Royal= #{best_Of_Royal_Cheese_calories}"
+
 end
 
 calories_counter("French fries", "Happy Meal", "Sprite")
