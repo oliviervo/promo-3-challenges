@@ -1,12 +1,18 @@
-class phone
-  def initialize(brand, model, color, capacity)
-    @brand = color
+class Phone
+  def initialize(brand, model)
+    @brand = brand
     @model = model
-    @color = color
-    @capacity = capacity
+    @sold = false
   end
 
-iphone4 = Phone.new("Apple", "iphone4", "white", "32Go")
-GalaxyS3 = Phone.new("Samsung", "S3", "silver", "16Go")
+
+  def sale
+    @sold = true
+  end
 
 end
+
+#iphone_4 = Phone.new("Apple", "iphone4", "white", "32Go")
+
+#Galaxy_S3 = Phone.new("Samsung", "S3", "silver", "16Go")
+
