@@ -1,5 +1,5 @@
 class Restaurant
-attr_accessor :average_rating, :city, :name, :address
+attr_accessor :average_rating, :city, :name, :address,:restaurants
   #TODO add relevant accessors if necessary
 
   def initialize(city, name)
@@ -9,6 +9,7 @@ attr_accessor :average_rating, :city, :name, :address
     @average_array = []
     @average_rating = 0
     @address = address
+
   end
 
   #TODO: implement #filter_by_city and #rate methods
@@ -17,8 +18,14 @@ attr_accessor :average_rating, :city, :name, :address
     @average_rating = @average_array.inject(:+) / @average_array.size
   end
 
-  def filter_by_city(restaurants, city)
-
+  def self.filter_by_city(restaurants, city)
+    restaurants_array = []
+    restaurants.each do|restaurant|
+      if restaurant.city == city
+         restaurants_array << restaurant
+      end
+    end
+    restaurants_array
   end
 
 end
