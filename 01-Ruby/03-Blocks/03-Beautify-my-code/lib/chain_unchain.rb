@@ -1,11 +1,8 @@
 def shuffle_word(a_word)
   #TODO: refactor this method
 
-  cap_word = a_word.upcase
-  array = cap_word.chars.to_a
-  shuffle_array = array.shuffle
+  a_word.upcase.chars.shuffle
 
-  shuffle_array
 
 end
 

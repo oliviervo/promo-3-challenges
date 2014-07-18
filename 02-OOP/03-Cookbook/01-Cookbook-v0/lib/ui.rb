@@ -14,16 +14,21 @@ class UI
   def list
     # TODO: call the appropriate controller method with the proper argument(s)
     # TODO: format and display the retrieved data in a numbered list
+    display_recipe
   end
 
   def add
     # TODO: ask the user a recipe name
     # TODO: call the appropriate controller method with the proper argument(s)
+    puts "Veuillez saisir un nom de recette"
+    recipe_name = gets.chomp
   end
 
   def del
     # TODO: ask the user a recipe index
     # TODO: call the appropriate controller method with the proper argument(s)
+    puts "Veuillez saisir un nom de recette à supprimer"
+    recipe_name = gets.chomp
   end
 
   def exit
