@@ -1,38 +1,33 @@
 require 'csv'
+require_relative "recipe.rb"
+require_relative "controller.rb"
 
 class Cookbook
-  attr_accessor :cookbook
+  attr_accessor :cookbook, :csv_file
   attr_reader :filename
 
- def initialize
+ def initialize(csv_file)
     @cookbook = []
-    @filename = "/home/olivier/code/oliviervo/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0
-  /lib/recipes.csv"
+    #@filename = "/home/olivier/code/oliviervo/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0
+  #/lib/recipes.csv"
+    @csv_file = csv_file
     load_csv
   end
 
   def load_csv
-    CSV.foreach(@filename) do |row|
+    CSV.foreach(@csv_file) do |row|
       @cookbook << row[0]
     end
   end
 
-  def display
-    @cookbook
-  end
-
-  def create_recipe(recipe)
+  def create(recipe)
     @cookbook << recipe
     save
   end
 
-  def destroy_recipe(index)
-    @cookbook.delete_at(index)
+  def remove(recipe_id)
+    @cookbook.delete_at(recipe_id)
     save
-  end
-
-  def exit_user
-    puts "fin du programme"
   end
 
   def save
@@ -44,10 +39,6 @@ class Cookbook
   end
 
 end
-create_recipe("chicken")
-create_recipe("burger")
-destroy_recipe(4)
-
 
 
 

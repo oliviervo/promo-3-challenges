@@ -1,29 +1,31 @@
-require_relative 'cookbook.rb'
-require_relative 'repo.rb'
-require_relative 'ui.rb'
-attr_accessor :cookbook
+require_relative "cookbook.rb"
+require_relative "view.rb"
 
 class Controller
-    def initialize(file_name)
+    attr_accessor :cookbook
+    attr_reader :recipe, :view
+
+    def initialize
       # Here you should instantiate the Cookbook model with the file
+    @cookbook = Cookbook.new
+    @view = View.new
 
     end
 
-    def display_recipe
-      @cookbook
+    def list_recipe
+      @view.list_view
     end
 
-    def create_recipe(recipe_name)
-      @cookbook << recipe_name
+    def create_recipe
+       view_create = @view.create_view
+      @cookbook.create(view_create)
     end
 
-    def destroy_recipe(recipe_name)
-      @cookbook.delete(recipe_name)
+    def destroy_recipe
+      view_remove = @view.remove_view
+      @cookbook.delete_at(view_remove)
     end
 
-    def exit_user
-      puts "fin du programme"
-    end
 
   # TODO: Implement the methods to retrieve, add, and delete recipes through the model
 end
