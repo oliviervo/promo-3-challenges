@@ -6,7 +6,7 @@ class View
   attr_reader :cookbook
 
   def list_view(cookbook)
-      cookbook.each_with_index{|item, index| puts "#{index} - #{item}"}
+      cookbook_db.each_with_index{|item, index| puts "#{index} - #{item}"}
     end
 
   def create_view

@@ -8,9 +8,7 @@ class Cookbook
 
  def initialize(csv_file)
     @cookbook = []
-    #@filename = "/home/olivier/code/oliviervo/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0
-  #/lib/recipes.csv"
-    @csv_file = csv_file
+    @csv_file = "/home/olivier/code/oliviervo/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0/spec/recipes.csv"
     load_csv
   end
 
@@ -20,12 +18,16 @@ class Cookbook
     end
   end
 
-  def create(recipe)
+  def recipes
+    @cookbook
+  end
+
+  def add_recipe(recipe)
     @cookbook << recipe
     save
   end
 
-  def remove(recipe_id)
+  def remove_recipe(recipe_id)
     @cookbook.delete_at(recipe_id)
     save
   end
