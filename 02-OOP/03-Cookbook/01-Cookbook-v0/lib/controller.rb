@@ -6,7 +6,7 @@ class Controller
 
     def initialize(cookbook)
       # Here you should instantiate the Cookbook model with the file
-    @cookbook = Cookbook.new
+    @cookbook = Cookbook.new("/home/olivier/code/oliviervo/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0/spec/recipes.csv")
     @view = View.new
 
     end
