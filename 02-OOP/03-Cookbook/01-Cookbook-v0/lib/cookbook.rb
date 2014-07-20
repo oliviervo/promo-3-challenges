@@ -32,10 +32,10 @@ class Cookbook
     save
   end
 
-  def save
-    CSV.open(@filename, "w") do |csv|
-      @cookbook.each do |recipe|
-      csv << [recipe]
+  def save(csv_file)
+    CSV.open(@csv_file, 'w') do |csv|
+      @cookbook.each do |row|
+      csv.puts(row)
         end
       end
   end
