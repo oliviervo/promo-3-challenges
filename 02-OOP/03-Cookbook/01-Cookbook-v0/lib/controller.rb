@@ -1,3 +1,4 @@
+require 'csv'
 require_relative "cookbook.rb"
 require_relative "view.rb"
 
