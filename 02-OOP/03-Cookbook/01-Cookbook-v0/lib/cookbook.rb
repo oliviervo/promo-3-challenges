@@ -1,47 +1,46 @@
 require 'csv'
-require_relative "recipe.rb"
-require_relative "controller.rb"
+require_relative "recipe"
+require_relative "controller"
+require_relative "view"
 
 class Cookbook
-  attr_accessor :cookbook, :csv_file
-  attr_reader :filename
+  attr_reader :recipes
 
  def initialize(csv_file)
-    @cookbook = []
-    @csv_file = "/home/olivier/code/oliviervo/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0/spec/recipes.csv"
-    load_csv
+    @recipes = []
+    @filepath = csv_file
+    load_csv(@filepath)
   end
 
-  def load_csv
-    CSV.foreach(@csv_file) do |row|
-      @cookbook << row[0]
+  def load_csv(file)
+    CSV.foreach(file) do |row|
+      @recipes << Recipe.new(row[0], row[1])
     end
   end
 
-  def recipes
-    @cookbook
-  end
-
-  def add_recipe(recipe)
-    @cookbook << recipe
-    save
-  end
-
-  def remove_recipe(recipe_id)
-    @cookbook.delete_at(recipe_id)
-    save
-  end
-
-  def save(csv_file)
-    CSV.open(@csv_file, 'w') do |csv|
-      @cookbook.each do |row|
-      csv.puts(row)
+  def save
+    CSV.open(@filepath, 'w') do |csv|
+      @recipes.each do |recipe|
+      csv << [recipe.name, recipe.description]
         end
       end
   end
 
-end
+  def recipes
+    @recipes
+  end
 
+  def add_recipe(recipe)
+    @recipes << recipe
+    save
+  end
+
+  def remove_recipe(recipe_id)
+    @recipes.delete_at(recipe_id)
+    save
+  end
+
+end
 
 
 

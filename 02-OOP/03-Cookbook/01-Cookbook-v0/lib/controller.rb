@@ -1,24 +1,26 @@
-require 'csv'
-require_relative "cookbook.rb"
-require_relative "view.rb"
+require_relative "cookbook"
+require_relative "view"
+require_relative "recipe"
 
 class Controller
-    attr_accessor :cookbook
 
     def initialize(cookbook)
       # Here you should instantiate the Cookbook model with the file
-    @cookbook = Cookbook.new("/home/olivier/code/oliviervo/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0/spec/recipes.csv")
+    @cookbook = cookbook
     @view = View.new
 
     end
 
     def list
-      @view.list_view(@cookbook.cookbook)
+      @view.list_view(@cookbook.recipes)
     end
 
     def create
-       view_create = @view.create_view
-      @cookbook.add_recipe(view_create)
+      name = @view.create_view_name
+      description = @view.create_view_description
+      new_recipe = Recipe.new(name,description)
+      #@cookbook.add_recipe(Recipe.new(new_recipe[0], new_recipe[1]))
+      @cookbook.add_recipe(new_recipe)
     end
 
     def destroy

@@ -1,16 +1,21 @@
-require_relative "controller.rb"
-require_relative "recipe.rb"
-require_relative "cookbook.rb"
+require 'csv'
+require_relative "controller"
+require_relative "cookbook"
+require_relative "router"
 
 class View
-  attr_reader :cookbook
 
-  def list_view(cookbook)
-      cookbook.each_with_index{|item, index| puts "#{index} - #{item}"}
+  def list_view(recipes)
+      recipes.each_with_index{|item, index| puts "#{index} - #{item.name}, #{item.description}"}
     end
 
-  def create_view
+  def create_view_name
     puts "Saisir un nom de recette : "
+    return gets.chomp
+  end
+
+  def create_view_description
+    puts "Saisir une description associée : "
     return gets.chomp
   end
 
