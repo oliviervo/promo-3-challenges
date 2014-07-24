@@ -90,4 +90,17 @@
 <part>id</part>
 </key>
 </table>
+<table x="356" y="290" name="votes">
+<row name="user_id" null="1" autoincrement="1">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
+<row name="survey_id" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="surveys" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>user_id</part>
+</key>
+</table>
 </sql>
