@@ -69,17 +69,8 @@
 <part>id</part>
 </key>
 </table>
-<table x="633" y="110" name="answers">
+<table x="639" y="183" name="answers">
 <row name="id" null="1" autoincrement="1">
-<datatype>TINYINT</datatype>
-<default>NULL</default></row>
-<row name="answer1" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="answer2" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default></row>
-<row name="answer3" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
 <row name="id_surveys" null="1" autoincrement="0">
@@ -90,7 +81,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="356" y="290" name="votes">
+<table x="424" y="336" name="votes">
 <row name="user_id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default><relation table="users" row="id" />
@@ -98,6 +89,10 @@
 <row name="survey_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default><relation table="surveys" row="id" />
+</row>
+<row name="id_answers" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="answers" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>user_id</part>
