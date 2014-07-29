@@ -11,7 +11,6 @@ User.create(name: "Eazze", email: "trtrt@zzzaaaavc.com")
 
 #p.User.last
 
-
 def ask(prompt)
   print "#{prompt} "
   gets.to_s.chomp
