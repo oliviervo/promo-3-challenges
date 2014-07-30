@@ -3,3 +3,23 @@
   width: 720px;
 	font-family: 'Open Sans', sans-serif;
 }
+
+.container header li {
+  display: inline;
+  padding-right: 50px
+}
+
+.container header ul {
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: solid #dfdfd9 1px;
+}
+
+h1 {
+text-align: center
+}
+
+.section ul{
+
+
+}
