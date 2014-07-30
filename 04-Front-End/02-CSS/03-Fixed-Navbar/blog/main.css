@@ -3,3 +3,46 @@
   width: 840px;
 	font-family: 'Open Sans', sans-serif;
 }
+
+header{
+background: black;
+color: white;
+position: fixed;
+right: 0;
+left: 0;
+z-index: 10;
+padding: 0;
+}
+
+header h1{
+  float: left;
+}
+
+
+div{
+  display: block;
+}
+
+nav{
+  display: inline-block;
+  float: right;
+
+}
+nav a{
+  display: inline-block;
+  width: 100px;
+line-height: 100px;
+color: white;
+}
+
+.nav-content{
+  margin: 0 auto;
+  width: 840px;
+}
+
+.content{
+  padding-top: 110px;
+}
+
+
+
