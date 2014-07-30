@@ -12,8 +12,37 @@
 </head>
 <body>
   <div class="container">
+    <header>
+        <h1>Formulaire d'inscription</h1>
+      </div>
+    </header>
 
     <!--YOUR FORM HERE-->
+      <form action="xxxx">
+        <div class= "field">First name: <input type="text" name="firstname"><br>
+        Last name: <input type="text" name="lastname"><br>
+        Password:  <input type="password" name="pwd"><br>
+      </div>
+      <br/ >
+        <div class= "radio"><input type="radio" name="meal" value="lunch">Lunch<br>
+        <input type="radio" name="meal" value="dinner">Dinner<br>
+      </div>
+      <br/ >
+      Select which meat you want to have : <select name="meat">
+          <option value="chicken">Chicken</option>
+          <option value="beef">Beef</option>
+          <option value="turkey">Turkey</option>
+          <option value="fish">Fish</option>
+      </select>
+      <br/ >
+        <input type="checkbox" name="member" value="member">I am a member<br>
+        <input type="checkbox" name="member" value="donator">I am a donator<br>
+        <br/ >
+        Any comment?   : ​<textarea id="txtArea" rows="10" cols="40"></textarea>
+        <br />
+        <br />
+        <input type="submit" value="Send">
+      </form>
 
   </div>
 </body>

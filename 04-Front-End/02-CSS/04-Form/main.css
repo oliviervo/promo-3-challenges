@@ -1,6 +1,31 @@
-.container {
-  margin: 0 auto;  
-  width: 840px;
+body {
+  background-image:url(http://twitter.ironspider.ca/images/twitter-background-18.jpg);
+  color: white;
+
 }
 
-/*Add some CSS rules to design your form */ 
+
+
+.container {
+  margin: 0 auto;
+  width: 840px;
+  font-family: 'arial', sans-serif;
+  font-size: 15px;
+}
+header h1 {
+  background-color: black;
+  text-align: center;
+}
+
+.field {
+  float: left;
+}
+
+.radio{
+margin-top: 10px;
+clear: both;
+width: 150px;
+border: solid black 1px;
+}
+
+/*Add some CSS rules to design your form */
