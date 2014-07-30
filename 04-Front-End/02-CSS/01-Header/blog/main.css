@@ -1,7 +1,13 @@
+header{
+  border-bottom: 1px dotted grey;
+}
+
+
 .container {
   margin: 0 auto;
   width: 720px;
 	font-family: 'Open Sans', sans-serif;
+
 }
 
 .container header li {
@@ -12,14 +18,13 @@
 .container header ul {
   text-align: center;
   padding-bottom: 5px;
-  border-bottom: solid #dfdfd9 1px;
 }
 
 h1 {
 text-align: center
 }
 
-.section ul{
-
-
+footer{
+  border-top: 1px dotted grey;
+  padding-right: 10px;
 }
