@@ -1,6 +1,14 @@
+body{
+    background-image: url('http://www.iceme.fr/images/grid.jpg');
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8em;
+
+}
+
+
 .wrapper {
-background-image: url('http://www.iceme.fr/images/background/background.jpg');
-height: 650px;
+background-image: url('images/fond_plane.jpg');
+height: 550px;
 background-size: cover;
 padding-top: 150px;
 text-align: center;
@@ -8,14 +16,14 @@ color: white;
 }
 
 
-h1{
+.lead h1{
   font-family: arial;
   font-size: 76px;
   text-shadow: 0 0 20px rgba(0, 0, 0, .8);
   color:white;
 }
 
-h2{
+.lead h2{
   background-color: rgba(0, 0, 0, .4);
   display: inline-block;
   font-size: 20px;
@@ -31,22 +39,18 @@ body{
   margin: 5px;
 }
 
-.features{
-  background-image: url('http://www.iceme.fr/images/grid.jpg');
-  background-repeat: yes
-}
 
 .features-single{
   margin-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 300px;
 }
 
 .newsletter{
-  margin-top: 50px;
+  margin: 50px;
 }
 
 .newsletter h2{
-  font-size: 30px;
+  font-size: 35px;
   background-color: transparent;
   color:black;
   text-align: center;
@@ -54,3 +58,74 @@ body{
 
 }
 
+.btn-primary{
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+
+}
+
+.btn-primary:hover{
+   background-color: #0d9378;
+  border-color: #0d9378;
+}
+
+.btn-success{
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+
+.btn-success:hover{
+   background-color: #0d9378;
+  border-color: #0d9378;
+}
+
+#footer{
+  background-color: #222;
+  color: #aaaaaa;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  margin-top: 100px;
+}
+
+.social-links{
+  font-size: 2em;
+}
+
+.social-links p{
+text-align: right;
+}
+
+.contact-body{
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+
+#intro {
+    background: url(images/intro.png) 50% 0 fixed;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+}
+#home {
+    background: url(images/home.jpg) 50% 0 fixed;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 200px 0;
+}
+#about {
+    background: url(images/about.png) 50% 0 fixed;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+    color: #fff;
+}
