@@ -33,8 +33,10 @@ var add_team = $('tbody').append('<tr><td>15</td></tr>');
 
 
   // Ex 7. Write some code to sum all points given to all teams
-  var sum = $('tbody tr td td td');  // TODO: replace 0 with your sum result, keep the sum variable.
-
+  var sum = 0;
+  $('tbody tr').each(function(i, value) {
+      sum += parseInt($(value).find('td:last').text());
+  });
 
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
@@ -42,8 +44,6 @@ var add_team = $('tbody').append('<tr><td>15</td></tr>');
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
   var transalteDown = $('#results').css("margin-top", "-20px");
-
-
 
 
   // Ex 10. Remove the "Email:" label from the DOM
